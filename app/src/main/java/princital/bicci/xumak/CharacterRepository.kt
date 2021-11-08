@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class CharacterRepository {
     private lateinit var allCollectionsRest: MutableLiveData<ArrayList<CharacterModel>>
 
-    fun getallCollectionCharacters(): LiveData<ArrayList<CharacterModel>> {
+    fun getallCollectionCharacters(limit:Int): LiveData<ArrayList<CharacterModel>> {
         allCollectionsRest = MutableLiveData()
         val retrofit: Retrofit = Retrofit.Builder()
             .baseUrl(BuildConfig.URL)
@@ -20,7 +20,7 @@ class CharacterRepository {
             .build()
 
         val api = retrofit.create(ApiRetrofit::class.java)
-        val call = api.getCharacterList("10")
+        val call = api.getCharacterList(limit.toString())
         call.enqueue(object : Callback<ArrayList<CharacterModel>> {
             override fun onResponse(
                 call: Call<ArrayList<CharacterModel>>,

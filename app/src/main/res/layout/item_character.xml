@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imgCharacter"
             android:layout_width="100dp"
             android:layout_height="130dp"
             android:scaleType="centerCrop"
@@ -33,11 +33,12 @@
             android:textColor="@color/black"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintEnd_toStartOf="@+id/imageView2"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imgCharacter"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Walter White" />
 
         <TextView
+            android:id="@+id/akaText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -47,7 +48,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView2"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imgCharacter"
             app:layout_constraintTop_toBottomOf="@+id/txtName"
             app:layout_constraintVertical_bias="0.0"
             tools:text="aka - Heisenberg" />

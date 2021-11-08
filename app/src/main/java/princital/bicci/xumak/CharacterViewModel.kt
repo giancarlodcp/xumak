@@ -10,6 +10,6 @@ class CharacterViewModel : ViewModel(){
     private var repository: CharacterRepository = CharacterRepository()
 
     fun getrestaurantDetails(): LiveData<ArrayList<CharacterModel>> {
-        return repository.getallCollectionCharacters()
+        return repository.getallCollectionCharacters(50)
     }
 }
